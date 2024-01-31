@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revision de almuerzos</title>
+</head>
+<style>
+    body {
+        font-family: 'Calibri', sans-serif;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 24px; 
+    }
+    p b {
+            font-size: 20px; 
+        }
+
+    .espacio {
+        margin-bottom: 20px;
+    }
+    
+</style>
+<body>
+    <h1>revision de almuerzos</h1>
+    <p><b>Detalle del movimiento: </b></p>
+    <div class="espacio">
+        {{ table | safe }}
+    </div>
+    
+    <form action="/">
+        <button type="submit">volver a la pagina principal</button>
+    </form>
+</body>
+</html>

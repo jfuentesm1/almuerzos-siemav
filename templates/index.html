@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de almuerzos siemav </title>
+
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+        }
+        .titulo {
+        font-size: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 15px 20px; 
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .grupo-campos {
+            margin-bottom: 10px;
+        }
+
+        .label-separado {
+            margin-top: 10px;
+        }
+        .menu-desplegable {
+            width: 300px; 
+            height: 40px; 
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1 class="titulo"> Pedido de almuerzo siemav </h1>
+    <h1 class="titulo"> Bienvenido {{ titulo }}</h1>
+    <form action="/reporte" method="post">
+        <p><b>SEMANA {{ fecha }}</b></p>
+        
+        <p><b> se registraran los almuerzos pedidos a partir del dia actual  consecutivamente </b></p>
+
+        <label for="recibidas">numero de almuerzos a pedir:</label>
+        <input type="number" id="recibidas" name="recibidas" >
+
+        <button type="submit" name= "pedido"> enviar pedido</button>
+
+        <p><b> filtrar sus pedidos por fecha </b></p>
+    </form>
+
+    <form action="/lecturas" method="post">
+
+        <label for="año">Año:</label>
+        <input type="number" id="year" name="year">
+
+        <label for="mes">Mes:</label>
+        <input type="number" id="month" name="month">
+
+        <label for="dia">Día:</label>
+        <input type="number" id="day" name="day">
+    
+        <button type="submit" name="revisar_almuerzos">revisar pedidos </button>
+    </form>
+</body>
+</html>
